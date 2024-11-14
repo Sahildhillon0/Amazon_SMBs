@@ -8,6 +8,7 @@ import Login from './Components/userProfile/Login';
 import Services from './Components/services/Services';
 import AboutUs from './Components/aboutUs/AboutUs';
 import ContactUs from './Components/contactUs/ContactUs';
+import List from './Components/list/List';
 
 const router = createBrowserRouter([
   {
@@ -78,6 +79,15 @@ const router = createBrowserRouter([
       <div>
         <Navbar />
         <ContactUs />
+      </div>
+    ),
+  },
+  {
+    path: "/list",
+    element: (
+      <div>
+        <Navbar />
+        <List />
       </div>
     ),
   },
