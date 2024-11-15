@@ -71,8 +71,8 @@ export default function Services() {
       </div>
       <p className="text-center mt-10 text-xl text-yellow-500  ">Areas where we serve...</p>
       <p className="text-black text-center mt-5 text-5xl font-bold">Our Services</p>
-      <div className="flex justify-around mt-12">
-        <div className="w-[20vw] border border-black rounded bg-gray-300 h-[40vh] p-2">
+      <div className="flex justify-center mt-12">
+        <div className="w-[25vw] border border-black rounded bg-gray-300 h-[42vh] p-2">
           <img src={Card1} alt="" className="h-[50%] w-auto m-auto" />
           <p className="mt-4 text-center text-xl">Express Shipping</p>
           <p className="mt-2 text-center text-base">
@@ -81,7 +81,7 @@ export default function Services() {
             destination on time.
           </p>
         </div>
-        <div className="w-[20vw] border border-black rounded bg-gray-300 h-[40vh] p-2">
+        <div className="w-[25vw] border border-black rounded bg-gray-300 h-[42vh] p-2 mx-16">
           <img src={Card2} alt="" className="h-[50%] w-auto m-auto" />
           <p className="mt-4 text-center text-xl">Inventory Management</p>
           <p className="mt-2 text-center text-base">
@@ -89,7 +89,7 @@ export default function Services() {
             minimize losses.
           </p>
         </div>
-        <div className="w-[20vw] border border-black rounded bg-gray-300 h-[40vh] p-2">
+        <div className="w-[25vw] border border-black rounded bg-gray-300 h-[42vh] p-3">
           <img src={Card3} alt="" className="h-[50%] w-auto m-auto" />
           <p className="mt-4 text-center text-xl">Supply Chain Optimization</p>
           <p className="mt-2 text-center text-base">
