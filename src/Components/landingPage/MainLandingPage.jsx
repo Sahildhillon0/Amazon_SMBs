@@ -1,10 +1,23 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Bgtext from "./assets/TextBg.jpeg";
 import TruckBg from "./assets/TruckBg.jpeg";
 import Logo from "../navBar/assets/Logo.jpeg";
-/* import { ScrollArea } from "shadcn-ui"; */
+import {
+  Table,
+  TableBody,
+  TableCaption,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from "@/components/ui/table";
+import { Link } from "react-router-dom";
 
 export default function MainLandingPage() {
+  const [selectedPage, setSelectedPage] = useState("Home");
+  const handlePageChange = (page) => {
+    setSelectedPage(page);
+  };
   return (
     <div>
       <div
@@ -40,19 +53,74 @@ export default function MainLandingPage() {
       <div
         className="h-[70vh] bg-cover bg-center p-5 bg-fixed"
         style={{ backgroundImage: `url(${TruckBg})` }}></div>
-      <div className=" bg-slate-800 text-center">
-        <div className="flex p-4">
-          <div>
-            <img src={Logo} alt="" />
+      <div className=" bg-slate-800 text-center pt-7">
+        <div className="flex p-4 justify-around  ">
+          <div className="h-[25vh]">
+            <img src={Logo} alt="" className="h-full w-auto" />
           </div>
-          <div>
-           {/*  <ScrollArea className="h-[200px] w-[350px] rounded-md border p-4">
-              Jokester began sneaking into the castle in the middle of the night and leaving jokes
-              all over the place: under the king's pillow, in his soup, even in the royal toilet.
-              The king was furious, but he couldn't seem to stop Jokester. And then, one day, the
-              people of the kingdom discovered that the jokes left by Jokester were so funny that
-              they couldn't help but laugh. And once they started laughing, they couldn't stop.
-            </ScrollArea> */}
+          <div className=" w-[70%] h-full ">
+            <Table className="h-full">
+              {/*  <TableCaption>A list of your recent invoices.</TableCaption> */}
+              {/*  <TableHeader>
+                <TableRow>
+                  <TableHead className="w-[100px]">Invoice</TableHead>
+                  <TableHead></TableHead>
+                  <TableHead></TableHead>
+                  <TableHead className="text-right">Amount</TableHead>
+                </TableRow>
+              </TableHeader> */}
+              <TableBody className="text-white">
+                <TableRow>
+                  <TableCell className="font-medium">Address</TableCell>
+                  <TableCell></TableCell>
+                  <TableCell></TableCell>
+                  <TableCell className="text-right">Rohtak,Haryana 124001</TableCell>
+                </TableRow>
+                <TableRow>
+                  <TableCell className="font-medium">Mail</TableCell>
+                  <TableCell></TableCell>
+                  <TableCell></TableCell>
+                  <TableCell className="text-right">skillissues@codethics.com</TableCell>
+                </TableRow>
+                <TableRow>
+                  <TableCell className="font-medium">Telephone</TableCell>
+                  <TableCell></TableCell>
+                  <TableCell></TableCell>
+                  <TableCell className="text-right">+69 43168511074</TableCell>
+                </TableRow>
+                <TableRow>
+                  <TableCell className="font-medium">Facebook</TableCell>
+                  <TableCell></TableCell>
+                  <TableCell></TableCell>
+                  <TableCell className="text-right">Code Ethics</TableCell>
+                </TableRow>
+                <TableRow>
+                  <TableCell className="font-medium">Instagram</TableCell>
+                  <TableCell></TableCell>
+                  <TableCell></TableCell>
+                  <TableCell className="text-right">@cod_ethics</TableCell>
+                </TableRow>
+              </TableBody>
+            </Table>
+          </div>
+        </div>
+        <div className="flex justify-center mt-5 border-t-2 border-white border-b-2">
+          <div className="text-white  py-8">
+          <ul className="flex h-full items-center">
+            {["Home", "Services", "About Us", "Contact Us", "Chat"].map(
+              (page) => (
+                <li
+                  key={page}
+                  className={`mx-5 h-full font-bold cursor-pointer transition-all text-center duration-300 flex items-center ${selectedPage === page ? "border-b-4 border-yellow-500" : ""}`}
+                  onClick={() => handlePageChange(page)}
+                >
+                  <Link to={`/${page.replace(/\s+/g, '').toLowerCase()}`}>
+                    {page}
+                  </Link>
+                </li>
+              )
+            )}
+          </ul>
           </div>
         </div>
       </div>
