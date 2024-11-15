@@ -106,7 +106,7 @@ export default function Navbar() {
               <p onClick={handleLogin} className="text-center h-full flex items-center p-3 cursor-pointer">
                 Log in
               </p>
-              <button onClick={handleRegister} className="bg-black text-white p-4 h-full">
+              <button onClick={handleRegister} className="bg-black text-white px-2 h-full rounded-none">
                 Register
               </button>
             </>
