@@ -6,6 +6,7 @@ import { auth } from "../userProfile/services/firebase";
 import { signOut } from "firebase/auth";
 import { getDoc, doc } from "firebase/firestore";
 import { onAuthStateChanged } from "firebase/auth";
+import { Link } from "react-router-dom";
 
 import { db } from "../userProfile/services/firebase"; // Firestore instance
 
@@ -80,14 +81,16 @@ export default function Navbar() {
         </div>
         <div>
           <ul className="flex h-full items-center">
-            {["Home", "Services", "How it works", "Contact Us", "Partners", "Careers"].map(
+            {["Home", "Services", "About Us", "Contact Us", "Chat"].map(
               (page) => (
                 <li
                   key={page}
                   className={`mx-5 h-full font-bold cursor-pointer transition-all text-center duration-300 flex items-center ${selectedPage === page ? "border-b-4 border-yellow-500" : ""}`}
                   onClick={() => handlePageChange(page)}
                 >
-                  {page}
+                  <Link to={`/${page.replace(/\s+/g, '').toLowerCase()}`}>
+                    {page}
+                  </Link>
                 </li>
               )
             )}
