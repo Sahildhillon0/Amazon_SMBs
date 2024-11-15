@@ -88,7 +88,7 @@ export default function Navbar() {
                   className={`mx-5 h-full font-bold cursor-pointer transition-all text-center duration-300 flex items-center ${selectedPage === page ? "border-b-4 border-yellow-500" : ""}`}
                   onClick={() => handlePageChange(page)}
                 >
-                  <Link to={`/${page.replace(/\s+/g, '').toLowerCase()}`}>
+                  <Link to={`/${page.replace(/\s+/g, '').toLowerCase()}`} className="w-full h-full flex items-center justify-center">
                     {page}
                   </Link>
                 </li>
