@@ -11,6 +11,7 @@ import Card1 from "./assets/Card1.jpeg";
 import Card2 from "./assets/Card2.jpeg";
 import Card3 from "./assets/Card3.jpeg";
 import { Button } from "@/components/ui/button";
+import Footer from "../Reusable Components/Footer";
 
 export default function Services() {
   return (
@@ -163,6 +164,7 @@ export default function Services() {
            
         </div>
       </div>
+      <Footer />
     </div>
   );
 }

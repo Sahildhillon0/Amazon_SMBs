@@ -20,7 +20,8 @@ import CardBg9 from "./assets/CardBg9.png";
 
 import { Button } from "@/components/ui/button";
 import LongCardBg from "./assets/LongCardBg.jpg";
-
+import Card from "@/components/Reusable Components/CardComponents";
+import Footer from "../Reusable Components/Footer";
 export default function AboutUs() {
   return (
     <div>
@@ -80,55 +81,14 @@ export default function AboutUs() {
       </div>
       {/* Card Line 1 */}
       <div className="w-[70vw] m-auto mt-20 flex  justify-between">
-        <div
-          className="w-[300px] h-[250px] bg-cover relative shadow-lg"
-          style={{ backgroundImage: `url(${CardBg1})` }}>
-          <div className="bottom-0 absolute flex">
-            <div className="h-[45%] w-[65%] bg-yellow-300  bg-opacity-50 backdrop-blur-md p-2">
-              <p className="font-semibold">Our Vision, Mission and Values</p>
-              <p className="text-xs mt-2">
-                Learn what guides our behavior, informs our management philosophy,...
-              </p>
-            </div>
-            <Button
-              variant="outline"
-              className="border border-black bg-yellow-500 text-black w-fit p-3 text-2xl self-end bg-opacity-50 backdrop-blur-md rounded-none font-bold">
-              →
-            </Button>
-          </div>
-        </div>
-        <div
-          className="w-[300px] h-[250px] bg-cover relative shadow-lg"
-          style={{ backgroundImage: `url(${CardBg2})` }}>
-          <div className="bottom-0 absolute flex">
-            <div className="h-[45%] w-[65%] bg-yellow-300  bg-opacity-50 backdrop-blur-md p-2">
-              <p className="font-semibold">Long-Term Vision</p>
-              <p className="text-xs mt-2">
-                Find out more about our goals for the future and the direction we’re heading
-              </p>
-            </div>
-            <Button
-              variant="outline"
-              className="border border-black bg-yellow-500 text-black w-fit p-3 text-2xl self-end bg-opacity-50 backdrop-blur-md rounded-none font-bold">
-              →
-            </Button>
-          </div>
-        </div>
-        <div
-          className="w-[300px] h-[250px] bg-cover relative shadow-lg"
-          style={{ backgroundImage: `url(${CardBg3})` }}>
-          <div className="bottom-0 absolute flex">
-            <div className="h-[45%] w-[65%] bg-yellow-300  bg-opacity-50 backdrop-blur-md p-2">
-              <p className="font-semibold">Company Data</p>
-              <p className="text-xs mt-2">Have a look at our company facts and stats</p>
-            </div>
-            <Button
-              variant="outline"
-              className="border border-black bg-yellow-500 text-black w-fit p-3 text-2xl self-end bg-opacity-50 backdrop-blur-md rounded-none font-bold">
-              →
-            </Button>
-          </div>
-        </div>
+        {/*         Card 1  */}
+        <Card image={CardBg1} title="Our Vision, Mission and Values" description="Learn what guides our behavior, informs our management philosophy..." />
+        {/*         Card 2
+         */}{" "}
+        <Card image={CardBg2} title="Long-Term Vision" description="Find out more about our goals for the future and the direction we’re heading" />
+        {/*         Card 3  */}
+
+        <Card image={CardBg3} title="Our History" description="Discover how we’ve grown and evolved over the years" />
       </div>
       {/* Div with cards */}
       <div className=" w-[70vw] mt-24 m-auto bg-gray-300 p-10">
@@ -152,6 +112,7 @@ export default function AboutUs() {
 
         {/* Card Line inside div with cards */}
         <div className="w-[65vw] m-auto mt-20 flex  justify-between">
+          {/*         Card 4 */}
           <div
             className="w-[300px] h-[250px] bg-cover relative shadow-lg"
             style={{ backgroundImage: `url(${CardBg4})` }}>
@@ -201,59 +162,17 @@ export default function AboutUs() {
       <div className="w-[70vw] m-auto mt-20 flex  justify-between">
         {/*         Card 7
          */}{" "}
-        <div
-          className="w-[300px] h-[250px] bg-cover relative shadow-lg"
-          style={{ backgroundImage: `url(${CardBg7})` }}>
-          <div className="bottom-0 absolute flex">
-            <div className="h-[45%] w-[65%] bg-yellow-300  bg-opacity-50 backdrop-blur-md p-2">
-              <p className="font-semibold">Our Quality</p>
-              <p className="text-xs mt-2">
-                Find out how we consistently deliver service of such high quality
-              </p>
-            </div>
-            <Button
-              variant="outline"
-              className="border border-black bg-yellow-500 text-black w-fit p-3 text-2xl self-end bg-opacity-50 backdrop-blur-md rounded-none font-bold">
-              →
-            </Button>
-          </div>
-        </div>
+        <Card image={CardBg7} title="Our Quality" description="Find out how we consistently deliver service of such high quality" />
         {/*         Card 8
          */}
-        <div
-          className="w-[300px] h-[250px] bg-cover relative shadow-lg"
-          style={{ backgroundImage: `url(${CardBg8})` }}>
-          <div className="bottom-0 absolute flex">
-            <div className="h-[45%] w-[65%] bg-yellow-300  bg-opacity-50 backdrop-blur-md p-2">
-              <p className="font-semibold">Video Library</p>
-              <p className="text-xs mt-2">Browse through our collection of videos </p>
-            </div>
-            <Button
-              variant="outline"
-              className="border border-black bg-yellow-500 text-black w-fit p-3 text-2xl self-end bg-opacity-50 backdrop-blur-md rounded-none font-bold">
-              →
-            </Button>
-          </div>
-        </div>
+        <Card image={CardBg8} title="Video Library" description="Browse through our collection of videos" />
         {/*         Card 9
          */}
-        <div
-          className="w-[300px] h-[250px] bg-cover relative shadow-lg"
-          style={{ backgroundImage: `url(${CardBg9})` }}>
-          <div className="bottom-0 absolute flex">
-            <div className="h-[45%] w-[65%] bg-yellow-300  bg-opacity-50 backdrop-blur-md p-2">
-              <p className="font-semibold">Find an Office</p>
-              <p className="text-xs mt-2">
-                Figure out which Yusen Logistics location is closest to you
-              </p>
-            </div>
-            <Button
-              variant="outline"
-              className="border border-black bg-yellow-500 text-black w-fit p-3 text-2xl self-end bg-opacity-50 backdrop-blur-md rounded-none font-bold">
-              →
-            </Button>
-          </div>
-        </div>
+        <Card image={CardBg9} title="Find an Office" description="Figure out which Yusen Logistics location is closest to you" />
+      </div>
+      <div className="mt-20">
+
+<Footer />
       </div>
     </div>
   );
