@@ -93,7 +93,7 @@ const router = createBrowserRouter(
       ),
     },
     {
-      path: "*", // Fallback route for unmatched paths
+      path: "*",
       element: (
         <div>
           <Navbar />
