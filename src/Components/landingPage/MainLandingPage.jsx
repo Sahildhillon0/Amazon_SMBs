@@ -4,8 +4,7 @@ import TruckBg from "./assets/TruckBg.jpeg";
 
 
 import { Link } from "react-router-dom";
-import { Button } from "@/components/ui/button.jsx";
-
+import Button from '../ui/button';
 import {
   Carousel,
   CarouselContent,
