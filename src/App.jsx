@@ -26,6 +26,7 @@ const router = createBrowserRouter(
       element: (
         <div>
           <Navbar />
+          <MainLandingPage />
         </div>
       ),
     },
@@ -66,7 +67,7 @@ const router = createBrowserRouter(
       ),
     },
     {
-      path: "/about-us",
+      path: "/aboutus",
       element: (
         <div>
           <Navbar />
@@ -75,7 +76,7 @@ const router = createBrowserRouter(
       ),
     },
     {
-      path: "/contact-us",
+      path: "/contactus",
       element: (
         <div>
           <Navbar />
