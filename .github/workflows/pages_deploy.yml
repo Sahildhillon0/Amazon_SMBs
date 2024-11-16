@@ -3,10 +3,10 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - main 
+      - main  # Trigger the workflow on push to the `main` branch
   pull_request:
     branches:
-      - main  
+      - main  # Optionally, trigger for PRs to the `main` branch
 
 jobs:
   build_and_deploy:
@@ -20,21 +20,27 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '18'  
+          node-version: '18'
 
-      # Step 3: Install dependencies
+      # Step 3: Clean npm cache and remove node_modules
+      - name: Clean npm cache and remove node_modules
+        run: |
+          rm -rf node_modules package-lock.json
+          npm cache clean --force
+
+      # Step 4: Install dependencies (with legacy peer deps if necessary)
       - name: Install dependencies
         run: |
-          npm ci
+          npm install --legacy-peer-deps
 
-      # Step 4: Build the app
+      # Step 5: Build the app
       - name: Build
         run: |
           npm run build 
 
-      # Step 5: Deploy to GitHub Pages (publishing from ./dist folder)
+      # Step 6: Deploy to GitHub Pages
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.GH_PAT }}  
-          publish_dir: ./dist  
+          github_token: ${{ secrets.GH_PAT }}
+          publish_dir: ./dist
