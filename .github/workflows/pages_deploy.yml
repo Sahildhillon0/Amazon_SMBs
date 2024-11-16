@@ -20,7 +20,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '18'
+          node-version: '18'  # Ensure you're using a compatible Node.js version
 
       # Step 3: Clean npm cache and remove node_modules
       - name: Clean npm cache and remove node_modules
@@ -28,17 +28,22 @@ jobs:
           rm -rf node_modules package-lock.json
           npm cache clean --force
 
-      # Step 4: Install dependencies (with legacy peer deps if necessary)
+      # Step 4: Install dependencies
       - name: Install dependencies
         run: |
           npm install --legacy-peer-deps
 
-      # Step 5: Build the app
+      # Step 5: Clear Vite cache (optional, in case of build issues)
+      - name: Clear Vite build cache
+        run: |
+          rm -rf node_modules/.vite
+
+      # Step 6: Build the app
       - name: Build
         run: |
           npm run build 
 
-      # Step 6: Deploy to GitHub Pages
+      # Step 7: Deploy to GitHub Pages
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
