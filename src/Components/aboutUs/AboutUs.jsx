@@ -24,7 +24,7 @@ import Card from "@/components/Reusable Components/CardComponents";
 import Footer from "../Reusable Components/Footer";
 export default function AboutUs() {
   return (
-    <div>
+    <div >
       {/* //About Us and At a Glance */}
       <div className="w-[70vw] m-auto mt-14">
         <Breadcrumb>
@@ -38,7 +38,7 @@ export default function AboutUs() {
             </BreadcrumbItem>
           </BreadcrumbList>
         </Breadcrumb>
-        <p className="text-5xl text-yellow-500 font-semibold mt-8">About Us</p>
+        <p className="text-5xl text-black font-semibold mt-8">About Us</p>
         <p className="text-3xl text-yellow-500 font-semibold mt-20">At A Glance</p>
         <p className="w-[70%] mt-5">
           Founded in 1955, Yusen Logistics is a global supply chain logistics company that provides
