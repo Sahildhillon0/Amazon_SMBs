@@ -64,7 +64,7 @@ export default function Services() {
   return (
     <div>
       <div
-        className="h-[50vh] relative pt-10 bg-cover bg-center"
+        className="h-[50vh] relative pt-10 bg-cover bg-center hidden sm:block"
         style={{ backgroundImage: `url(${bg})`, backgroundSize: "cover" }}>
       
         {/*         Carousel  */}
@@ -96,8 +96,8 @@ export default function Services() {
       </div>
       <p className="text-center mt-10 text-xl text-yellow-500  ">Areas where we serve...</p>
       <p className="text-black text-center mt-5 text-5xl font-bold">Our Services</p>
-      <div className="flex justify-center mt-12">
-        <div className="w-[25vw] border border-black rounded bg-gray-300 h-[42vh] p-2">
+      <div className=" justify-center mt-12 flex flex-col sm:flex-row items-center gap-10 ">
+        <div className="sm:w-[25vw] w-[80vw] border border-black rounded bg-gray-300 h-[42vh] p-2">
           <img src={Card1} alt="" className="h-[50%] w-auto m-auto" />
           <p className="mt-4 text-center text-xl">Express Shipping</p>
           <p className="mt-2 text-center text-base">
@@ -106,7 +106,7 @@ export default function Services() {
             destination on time.
           </p>
         </div>
-        <div className="w-[25vw] border border-black rounded bg-gray-300 h-[42vh] p-2 mx-16">
+        <div className="sm:w-[25vw] w-[80vw] border border-black rounded bg-gray-300 h-[42vh] p-2 mx-16">
           <img src={Card2} alt="" className="h-[50%] w-auto m-auto" />
           <p className="mt-4 text-center text-xl">Inventory Management</p>
           <p className="mt-2 text-center text-base">
@@ -114,7 +114,7 @@ export default function Services() {
             minimize losses.
           </p>
         </div>
-        <div className="w-[25vw] border border-black rounded bg-gray-300 h-[42vh] p-3">
+        <div className="sm:w-[25vw] w-[80vw] border-black rounded bg-gray-300 h-[42vh] p-3">
           <img src={Card3} alt="" className="h-[50%] w-auto m-auto" />
           <p className="mt-4 text-center text-xl">Supply Chain Optimization</p>
           <p className="mt-2 text-center text-base">
@@ -131,8 +131,8 @@ export default function Services() {
       <div className="bg-gray-200 p-5 mt-10">
         <p className="text-center mt-10 text-base text-yellow-500  ">SOME REASONS</p>
         <p className="text-black text-center mt-5 text-5xl font-bold">Why Chose Us</p>
-        <div className="flex justify-around mt-20">
-          <div className="w-[30vw] flex justify-between">
+        <div className="flex flex-col sm:flex-row gap-10 justify-around items-center mt-20 ">
+          <div className="w-[80vw] flex justify-between">
             <div className="font-bold text-yellow-500 text-lg">01</div>
             <div className="w-fit">----</div>
             <div className="w-[70%] h-[25vh]">
@@ -143,7 +143,7 @@ export default function Services() {
               </p>
             </div>
           </div>
-          <div className="w-[30vw] flex justify-between">
+          <div className="w-[80vw] flex justify-between">
             <div className="font-bold text-yellow-500 text-lg">02</div>
             <div className="w-fit">----</div>
             <div className="w-[70%] h-[25vh]">
@@ -154,7 +154,7 @@ export default function Services() {
               </p>
             </div>
           </div>
-          <div className="w-[30vw] flex justify-between">
+          <div className="w-[80vw] flex justify-between">
             <div className="font-bold text-yellow-500 text-lg">03</div>
             <div className="w-fit">----</div>
             <div className="w-[70%] h-[25vh]">
@@ -166,8 +166,8 @@ export default function Services() {
             </div>
           </div>
         </div>
-        <div className="flex justify-around mt-20">
-          <div className="w-[30vw] flex justify-between">
+        <div className="flex flex-col sm:flex-row gap-10 justify-around items-center mt-20">
+          <div className="w-[80vw] flex justify-between">
             <div className="font-bold text-yellow-500 text-lg">04</div>
             <div className="w-fit">----</div>
             <div className="w-[70%] h-[25vh]">
@@ -178,7 +178,7 @@ export default function Services() {
               </p>
             </div>
           </div>
-          <div className="w-[30vw] flex justify-between">
+          <div className="w-[80vw] flex justify-between">
             <div className="font-bold text-yellow-500 text-lg">05</div>
             <div className="w-fit">----</div>
             <div className="w-[70%] h-[25vh]">
@@ -189,7 +189,7 @@ export default function Services() {
               </p>
             </div>
           </div>
-          <div className="w-[30vw] flex justify-between">
+          <div className="w-[80vw] flex justify-between mb-10">
             <div className="font-bold text-yellow-500 text-lg">06</div>
             <div className="w-fit">----</div>
             <div className="w-[70%] h-[25vh]">
@@ -202,7 +202,10 @@ export default function Services() {
           </div>
         </div>
       </div>
+      
+
       <Footer />
+     
     </div>
   );
 }

@@ -11,8 +11,8 @@ export default function CardComponents({image, title, description}) {
         </div>
         <button
           variant="outline"
-          className="border border-black bg-yellow-500 text-black w-fit px-3 text-2xl self-end bg-opacity-50 backdrop-blur-md rounded-none font-bold">
-          →
+          className="border border-black bg-yellow-500 text-black w-fit px-3 text-2xl self-end bg-opacity-50 backdrop-blur-md rounded-none font-bold flex justify-center items-center">
+          <p>→</p>
         </button>
       </div>
     </div>

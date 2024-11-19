@@ -13,11 +13,11 @@ const footerData = [
 export default function Footer() {
     return (
         <div className="bg-slate-800 text-center pt-7">
-            <div className="flex p-4 justify-around">
-                <div className="h-[25vh]">
+            <div className="flex flex-col gap-5 sm:flex-row p-4 justify-around">
+                <div className="h-[25vh] flex justify-center">
                     <img src={Logo} alt="Logo" className="h-full w-auto" />
                 </div>
-                <div className="w-[55%] h-full">
+                <div className="sm:w-[55%] w-full h-full">
                     
                 <table className="h-full w-full">
                     <tbody className="text-white ">
@@ -31,7 +31,7 @@ export default function Footer() {
                 </table>
                 </div>
             </div>
-            <div className='h-[7vh] bg-gray-500 text-white flex items-center justify-center'>
+            <div className='h-[7vh] bg-gray-500 text-white flex items-center justify-center mt-5 sm:mt-0'>
                 <p>© CODETHICS LOGISTICS CO., LTD. All Rights Reserved</p>
             </div>
         </div>
